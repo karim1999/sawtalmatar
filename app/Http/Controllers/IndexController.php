@@ -16,6 +16,9 @@ class IndexController extends Controller
 
     public function index()
     {
+        if (session('language') != env('DEFAULT_LANGUAGE'))
+            session(['language' => env('DEFAULT_LANGUAGE')]);
+
         app()->setLocale(env('DEFAULT_LANGUAGE'));
         $api = $this->api;
     	//$api['app_url']=$temp['app_url'];
