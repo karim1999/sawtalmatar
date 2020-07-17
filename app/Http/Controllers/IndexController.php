@@ -14,10 +14,12 @@ class IndexController extends Controller
 	    }
 
 
-	    public function index(){ 
-	    	$api=$this->api;
+    public function index()
+    {
+        app()->setLocale(env('DEFAULT_LANGUAGE'));
+        $api = $this->api;
     	//$api['app_url']=$temp['app_url'];
-        	app()->setLocale(session('language'));
+//        	app()->setLocale(session('language'));
 
 	    	//session(['language'=>'ar']);
 	    	return view('welcome',compact('api'));
@@ -37,13 +39,13 @@ class IndexController extends Controller
 
     	if(null === (session('language'))){
     		session(['language'=>'ar']);
-    	} 
-        
+        }
+
 
     	if(null === (session('popup_status'))){
     		session(['popup_status'=>'true']);
     	}
- 
+
     	if(null === (session('header_status'))){
     		session(['intro_status'=>'true']);
     	}
@@ -52,7 +54,7 @@ class IndexController extends Controller
     	/*if(null === (session('adv_status'))){
     		session(['adv_status'=>'false']);
     	}
- 
+
     	if(null === (session('scroll_status'))){
     		session(['scroll_status'=>'false']);
     	}  */
@@ -67,15 +69,17 @@ class IndexController extends Controller
     public function turn_off_header(){
          session(['header_status'=>'false']);
     }
-    public function switch_language(){ 
+
+    public function switch_language()
+    {
         if(null === (session('language'))){
             session(['language'=>'ar']);
-        }  
+        }
         if(session('language') =="ar")
             session(['language'=>'en']);
         else
-            session(['language'=>'ar']); 
-        app()->setLocale(session('language')); 
+            session(['language' => 'ar']);
+        app()->setLocale(session('language'));
         return redirect()->route('index');
     }
 

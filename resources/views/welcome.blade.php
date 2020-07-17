@@ -207,11 +207,11 @@
 
                 <div class="col-12 col-md-4 text-center  " >
                     @if(session('language')=="ar")
-                        <a href="{{route('switch_language')}}" class="d-inline-block py-2 px-1" style="color: #fff">
+                        <a href="{{env('LINK_EN')}}" class="d-inline-block py-2 px-1" style="color: #fff">
                             English
                         </a>
                     @else
-                        <a href="{{route('switch_language')}}" class="d-inline-block py-3 px-1" style="color: #fff">
+                        <a href="{{env('LINK_AR')}}" class="d-inline-block py-3 px-1" style="color: #fff">
                             عربي
                         </a>
                     @endif
