@@ -231,13 +231,19 @@
     <div class="col-12 pt-5 pt-md-0">
         <div class="container pt-5 pt-md-0">
             <div class="col-12 px-0 text-center pt-4 pt-md-3">
-                <a  href="/"
-                    style="position: relative;z-index: 2 "
-                ><div id=""><img src="@if(session('language')=="ar")
+
+                <div id="">
+                    <a href="/"
+                       style="position: relative;z-index: 2 "
+                    >
+                        <img src="@if(session('language')=="ar")
                         {{$api['site_profile']->logo_ar_path}}
                         @else
                         {{$api['site_profile']->logo_en_path}}
-                        @endif" style="width: 130px;"></div> <span class="logo-text"></span></a>
+                        @endif" style="width: 130px;">
+                    </a>
+                </div>
+                <span class="logo-text"></span>
                 <div class="col-12 pt-3">
                     <p style="color: #fff;font-size: 17px">
                         @lang('index.title')   </p>
