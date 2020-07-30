@@ -164,13 +164,15 @@
 </div>
 
 
-<div class="col-12">
-    @if(session('language')=="ar" && session('header_status')!="false" && $api['advs']->header_status==1)
-        {!!$api['advs']->header_ar!!}
-    @elseif(session('language')!="ar" && session('header_status')!="false" && $api['advs']->header_status==1)
-        {!!$api['advs']->header_en!!}
+@if($api['advs']->header_status==1 &&  session('header_status')!="false")
+    <div class="col-12 px-0" style="background-color: #EB593C; color: white; text-align: center; padding: 5px">
+        @if(session('language')=="ar")
+            {!!$api['advs']->header_ar!!}
+        @else
+            {!!$api['advs']->header_en!!}
+        @endif
+    </div>
     @endif
-</div>
 
 
 
