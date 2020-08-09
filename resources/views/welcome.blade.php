@@ -34,18 +34,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174669370-8"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+{{--    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174669370-8"></script>--}}
+{{--    <script>--}}
+{{--        window.dataLayer = window.dataLayer || [];--}}
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+{{--        function gtag() {--}}
+{{--            dataLayer.push(arguments);--}}
+{{--        }--}}
 
-        gtag('js', new Date());
+{{--        gtag('js', new Date());--}}
 
-        gtag('config', 'UA-174669370-8');
-    </script>
+{{--        gtag('config', 'UA-174669370-8');--}}
+{{--    </script>--}}
 
     <!-- Styles -->
     <style>
